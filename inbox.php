@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <style>
+.Inboxtable tr,td{
+	box-shadow: none;
+}
 
 </style>
 <body>
@@ -39,7 +42,7 @@
 		        		</div>
 			         </nav>
 		 		</div>
-			<table class="table" >
+			<table class="table Inboxtable" >
 			<thead>
 				<tr>
 					<th scope="col">Primary</th>
@@ -49,17 +52,16 @@
 			</thead>
 			<tbody>
 			<?php
-			// $fname = $_POST ['fn']; 
 			// session_start();
 			$query="select * from composetable";
 			$result=mysqli_query($connect,$query);
 			while($row=mysqli_fetch_assoc($result))
 			{
 			  ?>
-			  	<tr style="border-bottom: 1px solid lightgrey;">
+			  	<tr>
 			  	<!--onclick="window.location.href='maildetail.php';"-->		  		
 				    <td class="recipients" style="width: 200px;">
-				    		<a href="maildetail.php?did=<?php echo $row['id'] ?>" class="w-100"><?php echo $row['recipients'] ?></a>	
+				    		<a href="maildetail.php?did=<?php echo $row['id'] ?>" class="w-100 btn"><?php echo $row['recipients'] ?></a>	
 				    	</td>
 				    <td><?php echo $row['subject'] ?>-<?php echo $row['message'] ?></td>
 					 

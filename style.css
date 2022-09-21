@@ -1,10 +1,4 @@
-/*.composeform{
-	width: 500px; 
-	height: 500px;
-	margin-top: 300px;
-	margin-left: 675px; 
-	border: 1px solid black;
-}*/
+
 .nm{
 	border-bottom: 1px solid grey; 
 	background-color: lightgrey; 
@@ -27,12 +21,10 @@
 	height: 300px;
 	width: 492px;
 }
-a:hover {
-	background-color: coral;
-}
 th:hover{
 	background-color: lightgrey;
 }
-tbody tr:hover {
+.Inboxtable tr:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+

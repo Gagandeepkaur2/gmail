@@ -12,18 +12,6 @@
 	  $password=$_POST['password'];
 	  $repassword=$_POST['repassword'];
 
-	    $sql="insert into signupform(firstname,lastname,email,password,againpassword) values('$fname','$lname','$email','$password','$repassword')";
-	  if(mysqli_query($connect,$sql))
-	  {
-	  	echo "record insert";
-	  }
-	  else
-	  {
-	  	echo "record not insert";
-	  }
-
-	}
-
 	  // $query="select email from signupform where email='$email'";
 	  // $result=mysqli_query($connect,$query);
 	  // $count=mysqli_num_ros($result);
@@ -32,17 +20,28 @@
 	  // 	echo "Email already exists";
 	  // }
 	  // else
-	  // {
-	// }
-
+   //    {
+	    $sql="insert into signupform(firstname,lastname,email,password,againpassword) values('$fname','$lname','$email','$password','$repassword')";
+	    if(mysqli_query($connect,$sql))
+	    {
+	    	echo "record insert";
+	    }
+	    else
+	    {
+	    	echo "record not insert";
+	    }
+	  // }
+	}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>SignUp</title>
 </head>
 <body>
